@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}">
+</head>
+<body>
+    <div class="top-area">
+        <p>Tue, Feb 05, 2019 | Updated 04.09PM IST</p>
+    </div>
+    <div>
+        <h1 align="center">THE TIMES OF INDIA</h1>
+    </div>
+    <div class="menu">
+        <ul>
+            {% for item in items %}
+                <li style="color: white;display: inline">
+                    <a href style="color: white;">{{ item }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
