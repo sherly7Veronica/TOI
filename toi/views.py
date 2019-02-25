@@ -14,6 +14,12 @@ def home(request):
     return render(request, 'home.html')
 
 
+def toi(request):
+    queryset = Level1.objects.all()
+    context = {'items': queryset}
+    return render(request, 'menu.html', context)
+
+
 class CategoryCreateView(generics.ListCreateAPIView):
     # pagination_class = Pagination
     serializer_class = CategorySerializer
@@ -29,12 +35,11 @@ class CategoryRUDView(generics.RetrieveUpdateDestroyAPIView):
 class CategoryListView(generics.ListAPIView):
     # pagination_class = Pagination
     renderer_classes = [TemplateHTMLRenderer]
-    template_name = 'menu.html'
+    # template_name = 'menu.html'
     serializer_class = CategorySerializer
-    # queryset = Level1.objects.all()
+    queryset = Level1.objects.all()
 
-
-    def get(self, request):
-        queryset = Level1.objects.all()
-        return Response({'items': queryset})
+    # def get(self, request):
+    #     queryset = Level1.objects.all()
+    #     return Response({'items': queryset})
 
