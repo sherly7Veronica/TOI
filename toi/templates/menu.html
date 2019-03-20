@@ -6,20 +6,36 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}">
 </head>
-<body>
-    <div class="top-area">
-        <p>Tue, Feb 05, 2019 | Updated 04.09PM IST</p>
+<body onload="getDate();" >
+    <div>
+        <p><span id="date"></span></p>
+        <script type="text/javascript" language="javascript">
+
+        function getDate() {
+              var event = new Date();
+              var current_date=event.toDateString();
+              var current_time=event.toLocaleTimeString('en-US');
+              document.getElementById('date').innerText=current_date+ " | "+"UPDATED"+" "+current_time ;
+        }
+
+        </script>
     </div>
     <div>
-        <h1 align="center">THE TIMES OF INDIA</h1>
+        <h1>THE TIMES OF INDIA</h1>
     </div>
-    <div class="menu">
+    <div>
         <ul>
-            {% for item in items %}
-                <li style="color: white;display: inline">
-                    <a href style="color: white;">{{ item }}</a>
-                </li>
+            {% for item in l1 %}
+                <li><a href="#">{{ item.name }}</a></li>
             {% endfor %}
+            <li>
+                <a href="#">Products</a>
+                <ul class="dropdown">
+                {% for item2 in l2 %}
+                    <li><a href="#">{{ item2.name }}</a></li>
+                {% endfor %}
+                </ul>
+            </li>
         </ul>
     </div>
 </body>

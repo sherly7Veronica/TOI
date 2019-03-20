@@ -1,10 +1,45 @@
-.menu {
-    background-color: red;
-    /*display: inline;*/
-    /*color: white;*/
-}
-
-/*ul > li {*/
+/*.menu {*/
+    /*background-color: red;*/
     /*display: inline;*/
     /*color: white;*/
 /*}*/
+
+/*a:hover {*/
+  /*background-color: yellow;*/
+/*}*/
+
+ul{
+        padding: 0;
+        list-style: none;
+        background: red;
+    }
+ul li{
+    display: inline-block;
+    position: relative;
+    line-height: 21px;
+    text-align: left;
+}
+ul li a{
+    display: block;
+    padding: 8px 25px;
+    color: #333;
+    text-decoration: none;
+}
+ul li a:hover{
+    color: #fff;
+    background: #939393;
+}
+ul li ul.dropdown{
+    min-width: 100%; /* Set width of the dropdown */
+    background: #f2f2f2;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+}
+ul li:hover ul.dropdown{
+    display: block;	/* Display the dropdown */
+}
+ul li ul.dropdown li{
+    display: block;
+}
