@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/news.css' %}">
+    <script type="text/javascript" language="javascript" src="./../../static/js/news.js"></script>
+</head>
+
+<body onload="getDate();">
+    <div class="top-area">
+        <div id="container">
+            <div class="row">
+                <div class="column">
+                    <p><span id="date"></span></p>
+                </div>
+{#                <div class="column">#}
+{#                    <div id="widget-head">#}
+{#                        <div>#}
+{#                            <div id="tpwidget-prelogin" class="tpwidget text-right tpwidget-prelogin">#}
+{#                                <div class="tpwidget-inline widget-prelogin clearfix">#}
+{#                                    <div class="tp-logo">#}
+{#                                        <img src="//image.timespoints.iimg.in/tpwidgets/static/dist/images/crown.svg">#}
+{#                                    </div>#}
+{#                                    <div class="widget-text">Claim your#}
+{#                                        <span class="odometer-num">#}
+{#                                        <div class="odometer odometer-auto-theme">#}
+{#                                            <div class="odometer-inside">#}
+{#                                                <span class="odometer-digit">#}
+{#                                                    <span class="odometer-digit-spacer">8#}
+{#                                                    </span>#}
+{#                                                    <span class="odometer-digit-inner">#}
+{#                                                        <span class="odometer-ribbon">#}
+{#                                                            <span class="odometer-ribbon-inner">#}
+{#                                                                <span class="odometer-value">1#}
+{#                                                                </span>#}
+{#                                                            </span>#}
+{#                                                        </span>#}
+{#                                                    </span>#}
+{#                                                </span>#}
+{#                                                <span class="odometer-digit">#}
+{#                                                    <span class="odometer-digit-spacer">8</span>#}
+{#                                                    <span class="odometer-digit-inner">#}
+{#                                                        <span class="odometer-ribbon">#}
+{#                                                            <span class="odometer-ribbon-inner">#}
+{#                                                                <span class="odometer-value">6</span>#}
+{#                                                            </span>#}
+{#                                                        </span>#}
+{#                                                    </span>#}
+{#                                                </span>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                        </span> points#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div id="tpwidget-postlogin" class="text-right tpwidget tpwidget-postlogin hidden"><div class="tpwidget-inline widget-postlogin clearfix">#}
+{#                                <div class="normal-state"><div class="tp-logo">#}
+{#                                    <img src="//image.timespoints.iimg.in/tpwidgets/static/dist/images/crown.svg">#}
+{#                                </div>#}
+{#                                    <div class="widget-text">#}
+{#                                        <span class="odometer-num">#}
+{#                                            <div class="odometer odometer-auto-theme">#}
+{#                                                <div class="odometer-inside">#}
+{#                                                    <span class="odometer-digit">#}
+{#                                                        <span class="odometer-digit-spacer">8</span>#}
+{#                                                        <span class="odometer-digit-inner"><span class="odometer-ribbon">#}
+{#                                                            <span class="odometer-ribbon-inner">#}
+{#                                                                <span class="odometer-value">0</span>#}
+{#                                                            </span>#}
+{#                                                        </span>#}
+{#                                                        </span>#}
+{#                                                    </span>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </span> TimesPoints#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{##}
+{#                    </div>#}
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+    <header id="header" class="sec- default-header ">
+        <div class="main-area">
+      <div class="container">
+         <div class="adbox-left">
+            <div data-isactive="ear_left" data-size="[[220, 90],[210, 70]]" id="div-gpt-ad-0earleft" data-adsslot="TOI/TOI_Home/TOI_Home_Home_New/TOI_HP_NW_SLG_EP_LHS_ATF_210"></div>
+         </div>
+         <div class="adbox-right">
+            <div data-isactive="ear_right" data-size="[[220, 90],[210, 70]]" id="div-gpt-ad-0earright" data-adsslot="TOI/TOI_Home/TOI_Home_Home_New/TOI_HP_NW_SLG_EP_RHS_ATF_210"></div>
+         </div>
+         <a class="mobiletopnav" href="javascript:void(0);"></a>
+         <div itemtype="https://schema.org/Organization" itemscope="itemscope" itemprop="publisher" class="logo">
+
+{#            <h1><a pg="#Click~Header-Logo" class="main-sprite" href="/">#}
+{#                <img src="https://static.toiimg.com/photo/45372282.cms" title="News" alt="News" border="0" width="509" height="40"></a>#}
+{#            </h1>#}
+            <h1 align="center">THE TIMES OF INDIA</h1>
+
+{#            <span itemtype="https://schema.org/ImageObject" itemscope="itemscope" itemprop="logo">#}
+{#               <meta content="https://static.toiimg.com/photo/msid-58127550/toilogo.jpg" itemprop="url">#}
+{#               <meta content="600" itemprop="width">#}
+{#               <meta content="60" itemprop="height">#}
+{#            </span>#}
+{#            <meta content="Times of India" itemprop="name">#}
+{#            <meta content="https://timesofindia.indiatimes.com" itemprop="url">#}
+{#            <span id="weathershow" class="temp">  {# added class #}
+{#            <span class="temp_h">#}
+{#            Delhi#}
+{#            </span>#}
+{#            <span class="temp_g">#}
+{#            <a href="/weather/city-Delhi.cms" target="_blank">#}
+{#            <span class="icon hazy"></span>#}
+{#            <span class="temp">#}
+{#            <span class="wdC">28°<small>C</small></span>#}
+{#            <span class="wdF">82°F</span>#}
+{#            </span>#}
+{#            </a>#}
+{#            </span>#}
+{#            <span class="optionshome">#}
+{#            <a pg="#Change-Fahrenheit~Header-Weather" onclick="$('.wdF').hide();$('.wdC').show();$('#wdCid').hide();$('#wdFid').show();" style="cursor: pointer; display: none;" id="wdCid">°C</a>#}
+{#            <a pg="#Change-Celcius~Header-Weather" onclick="$('.wdC').hide();$('.wdF').show();$('#wdFid').hide();$('#wdCid').show();" style="cursor: pointer;" id="wdFid">°F</a>#}
+{#            </span>#}
+{#            <a href="/weather.cms" target="_blank" class="arrow" pg="#Click~Header-Weather">»</a>#}
+{#            </span>#}
+         </div>
+      </div>
+   </div>
+       <div class="bottom-area">
+          <div class="container">
+             <div id="allmenu-content" class="allmenu-content"></div>
+             <nav id="main-nav">
+                <ul itemtype="http://www.schema.org/SiteNavigationElement" itemscope="itemscope" class="hpnav-ul show-extra">
+                   <li data-menu-type="two-column" data-id="home" class="nav-home" id="nav-home">
+{#                        {% block content %}#}
+{#                        {% endblock %}#}
+{#                    {% for item in l1 %}#}
+{#                    <a href="#">{{ item }}</a>#}
+{#                    {% endfor %}#}
+{#                       <a href="{% url 'delt' %}">Videos</a>#}
+                       <a href="{% url 'city' %}">City</a>
+                       <a href="https://www.w3schools.com/images/picture.jpg">India</a>
+                   </li>
+                </ul>
+             </nav>
+          </div>
+       </div>
+    </header>
+</body>
+</html>

@@ -6,6 +6,7 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}">
 </head>
+
 <body onload="getDate();" >
     <div>
         <p><span id="date"></span></p>
@@ -22,20 +23,20 @@
     </div>
     <div>
         <h1>THE TIMES OF INDIA</h1>
-    </div>
-    <div>
+{#    </div>#}
+{#    <div>#}
         <ul>
             {% for item in l1 %}
                 <li><a href="#">{{ item.name }}</a></li>
+{#                <ul class="dropdown">#}
+{#                <div class="dropdown-content">#}
+{#                {% for item2 in l2 %}#}
+{#                    <li><a href="#">{{ item2.name }}</a></li>#}
+{#                {% endfor %}#}
+{#                </div>#}
+{#                </ul>#}
+
             {% endfor %}
-            <li>
-                <a href="#">Products</a>
-                <ul class="dropdown">
-                {% for item2 in l2 %}
-                    <li><a href="#">{{ item2.name }}</a></li>
-                {% endfor %}
-                </ul>
-            </li>
         </ul>
     </div>
 </body>

@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     url(r'^toi/', include('toi.urls')),
-    url(r'', views.home, name='home'),
+    url(r'^news/', include('news.urls')),
+    # url(r'', views.home, name='home'),
     # url(r'^', include('example.urls')),
 ]

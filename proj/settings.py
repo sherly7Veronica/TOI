@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'toi',
+    # 'news',
     # 'example',
 
 ]
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'proj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/home/camelport06/Desktop/toi/proj/toi/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

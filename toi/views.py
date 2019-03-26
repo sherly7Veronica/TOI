@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.views.generic.base import TemplateView
 from rest_framework import generics
 from rest_framework.renderers import TemplateHTMLRenderer
 from toi.models import Level1, Level2, Level3
@@ -15,7 +16,7 @@ def home(request):
 
 
 def toi(request):
-    l1 = Level1.objects.all()
+    l1 = Level1.objects.raw("select name from toi_level1")
     l2 = Level2.objects.all()
     l3 = Level3.objects.all()
     context = {
@@ -23,7 +24,27 @@ def toi(request):
                'l2': l2,
                'l3': l3
                }
-    return render(request, 'menu.html', context)
+    return render(request, 'news.html', context)
+
+
+def city(request):
+    # post=get_object_or_404 (Level1, pk=pk)
+    l1=Level1.objects.all()
+    l2=Level2.objects.all ()
+    l3=Level3.objects.all ()
+    context={
+        'l1': l1,
+        'l2': l2,
+        'l3': l3
+    }
+    return render(request, 'city.html', context)
+
+# class Header(TemplateView):
+#     model = Level1
+#     template_name = 'header'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super()
 
 
 class Level1CreateView(generics.ListCreateAPIView):
