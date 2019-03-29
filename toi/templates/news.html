@@ -141,11 +141,25 @@
 {#                        {% block content %}#}
 {#                        {% endblock %}#}
 {#                    {% for item in l1 %}#}
-{#                    <a href="#">{{ item }}</a>#}
+{#                    <a href="/">{{ item }}</a>#}
 {#                    {% endfor %}#}
-{#                       <a href="{% url 'delt' %}">Videos</a>#}
+                       <a href="{% url 'videos' %}">Videos</a>
                        <a href="{% url 'city' %}">City</a>
-                       <a href="https://www.w3schools.com/images/picture.jpg">India</a>
+                       <a href="{% url 'india' %}">India</a>
+                       <a href="{% url 'elections' %}">Elections</a>
+                       <a href="{% url 'world' %}">World</a>
+                       <a href="{% url 'business' %}">Business</a>
+                       <a href="{% url 'tech' %}">Tech</a>
+                       <a href="{% url 'cricket' %}">Cricket</a>
+                       <a href="{% url 'sports' %}">Sports</a>
+                       <a href="{% url 'entertainment' %}">Entertainment</a>
+                       <a href="{% url 'web-series' %}">Web Series</a>
+                       <a href="{% url 'life-style' %}">Life & Style</a>
+                       <a href="{% url 'blogs' %}">Blogs</a>
+                       <a href="{% url 'photos' %}">Photos</a>
+                       <a href="{% url 'live-tv' %}">Live TV</a>
+                       <a href="{% url 'education' %}">Education</a>
+                       <a href="{% url 'all-sections' %}">All Sections</a>
                    </li>
                 </ul>
              </nav>
